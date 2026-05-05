@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>URBANSTYLE MANAGUA | Metropolitan Brutalism</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#303030",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0e0e0e",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "primary-container": "#ff5545",
+                    "secondary": "#c6c6c7",
+                    "inverse-surface": "#e2e2e2",
+                    "on-secondary": "#2f3131",
+                    "on-secondary-container": "#b4b5b5",
+                    "tertiary": "#c8c6c5",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-background": "#e2e2e2",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "inverse-on-surface": "#303030",
+                    "on-primary-fixed-variant": "#930005",
+                    "on-surface-variant": "#ebbbb4",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "primary-fixed-dim": "#ffb4aa",
+                    "inverse-primary": "#c0000a",
+                    "surface-bright": "#393939",
+                    "outline-variant": "#603e39",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-primary-container": "#5c0002",
+                    "surface-container-low": "#1b1b1b",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "background": "#131313",
+                    "tertiary-container": "#929090",
+                    "surface-container-highest": "#353535",
+                    "on-primary": "#690003",
+                    "surface-tint": "#ffb4aa",
+                    "surface": "#131313",
+                    "error-container": "#93000a",
+                    "on-tertiary-container": "#2a2a2a",
+                    "on-error-container": "#ffdad6",
+                    "primary-fixed": "#ffdad5",
+                    "on-primary-fixed": "#410001",
+                    "primary": "#ffb4aa",
+                    "on-surface": "#e2e2e2",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface-variant": "#353535",
+                    "outline": "#b18780",
+                    "surface-container": "#1f1f1f",
+                    "surface-dim": "#131313",
+                    "secondary-container": "#454747",
+                    "surface-container-high": "#2a2a2a",
+                    "on-secondary-fixed-variant": "#454747"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .brutalist-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+  #mobile-menu {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  #mobile-menu.active {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  body.menu-open {
+    overflow: hidden;
+  }
+</style>
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N6JRSN72');</script>
+<!-- End Google Tag Manager -->
+
+
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6JRSN72"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<!-- TopAppBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#131313]/90 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<button class="focus:outline-none" id="menu-toggle">
+<span class="material-symbols-outlined text-[#ff5545] text-3xl" data-icon="menu">menu</span>
+</button>
+<span class="text-2xl font-black tracking-tighter text-white font-['Space_Grotesk'] uppercase">URBANSTYLE MANAGUA</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#ff5545] font-bold border-none font-['Space_Grotesk'] uppercase tracking-tighter text-sm" href="#">COLLECTIONS</a>
+<a class="text-white font-medium hover:bg-[#ff5545] hover:text-[#131313] transition-all duration-75 px-2 py-1 font-['Space_Grotesk'] uppercase tracking-tighter text-sm" href="#">STORES</a>
+</div>
+</nav><div class="fixed inset-0 z-[49] bg-[#131313] flex flex-col pt-24 px-8 md:hidden" id="mobile-menu">
+<div class="flex flex-col gap-6">
+<a class="mobile-link text-4xl font-black text-white uppercase tracking-tighter border-b border-outline-variant/10 pb-4" href="#">Home</a>
+<a class="mobile-link text-4xl font-black text-white uppercase tracking-tighter border-b border-outline-variant/10 pb-4" href="#drop-section">Products</a>
+<a class="mobile-link text-4xl font-black text-white uppercase tracking-tighter border-b border-outline-variant/10 pb-4" href="#benefits-section">Benefits</a>
+<a class="mobile-link text-4xl font-black text-white uppercase tracking-tighter border-b border-outline-variant/10 pb-4" href="#faq-section">FAQ</a>
+<a class="mobile-link text-4xl font-black text-[#ff5545] uppercase tracking-tighter border-b border-outline-variant/10 pb-4" href="#discount-form">Get Discount</a>
+</div>
+<div class="mt-auto mb-12">
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-4">Follow the tribe</p>
+<div class="flex gap-6">
+<span class="text-white uppercase font-bold text-sm tracking-tighter">Instagram</span>
+<span class="text-white uppercase font-bold text-sm tracking-tighter">Tiktok</span>
+</div>
+</div>
+</div>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[700px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale opacity-60" data-alt="Gritty urban streetwear portrait of a model in a dark alley with cinematic neon lighting and concrete textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMDHzADH7trMkoUgzaHtFNN2Gcng7uMM7QEc7oAP0zxDH8mFTsrCSS6YMWp_iG3atL3mJvpV6NMwJ3XSXHHQal2V_1HMxO-3rEe5YXHtPqwhuP29Xu8YLgCsqC1SYXWfkvir8fNJ3-xCEAURoWhG-DpADeFhud_mprBm3qjgmWfVxgSirjqTfrYx-31sf3HxKB_CP_G9bujSHpckgZwM7euOlYOiy8TE_0cUhKLyKXNKtFSMlNldCEpRuS1J6exNDcJ-jkb-GZMB4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50"></div>
+</div>
+<div class="container mx-auto px-8 z-10">
+<div class="max-w-4xl">
+<h1 class="font-headline font-black text-6xl md:text-8xl leading-none uppercase tracking-tighter mb-4 text-white">
+                        Viste tu <span class="text-primary-container">estilo urbano</span>
+</h1>
+<p class="font-headline text-xl md:text-2xl text-secondary tracking-widest uppercase mb-10 max-w-2xl">
+                        Camisetas únicas para destacar en la selva de concreto.
+                    </p>
+<button  onclick="gtag('event','click_descuento',{
+event_category:'conversion',
+event_label:'hero'
+});" class="bg-primary-container text-on-primary-fixed font-headline font-bold text-xl px-10 py-5 uppercase tracking-tighter active:scale-95 transition-transform hover:bg-primary-fixed duration-75">
+                        Quiero mi descuento
+                    </button>
+</div>
+</div>
+</section>
+<!-- Flash Sale Ticker -->
+<div class="bg-inverse-primary py-3 overflow-hidden whitespace-nowrap">
+<div class="inline-block animate-marquee">
+<span class="font-headline font-bold text-white px-8 uppercase tracking-widest">20% DE DESCUENTO EN TU PRIMERA COMPRA — ÚLTIMAS UNIDADES EN STOCK — ENVÍO GRATIS MANAGUA — </span>
+<span class="font-headline font-bold text-white px-8 uppercase tracking-widest">20% DE DESCUENTO EN TU PRIMERA COMPRA — ÚLTIMAS UNIDADES EN STOCK — ENVÍO GRATIS MANAGUA — </span>
+</div>
+</div>
+<!-- Value Prop -->
+<section class="py-24 bg-surface-container-low" id="benefits-section">
+<div class="container mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+<div class="bg-surface-container p-12 border-r border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-5xl mb-6" data-icon="palette">palette</span>
+<h3 class="font-headline text-2xl font-bold text-white mb-4 uppercase">Exclusive Designs</h3>
+<p class="text-secondary leading-relaxed">Arte brutalista plasmado en algodón de alta calidad. Ediciones limitadas que no encontrarás en centros comerciales.</p>
+</div>
+<div class="bg-surface-container-high p-12 border-r border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-5xl mb-6" data-icon="payments">payments</span>
+<h3 class="font-headline text-2xl font-bold text-white mb-4 uppercase">Affordable Prices</h3>
+<p class="text-secondary leading-relaxed">Calidad premium a precios accesibles. Sin intermediarios, directo de nuestra base a tu armario.</p>
+</div>
+<div class="bg-surface-container p-12">
+<span class="material-symbols-outlined text-primary-container text-5xl mb-6" data-icon="local_shipping">local_shipping</span>
+<h3 class="font-headline text-2xl font-bold text-white mb-4 uppercase">Fast Delivery</h3>
+<p class="text-secondary leading-relaxed">Logística optimizada en toda Managua. Recibe tus prendas en tiempo récord con seguimiento en vivo.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-24 bg-background" id="drop-section">
+<div class="container mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<h2 class="font-headline text-5xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none">
+                        Drop <br/> <span class="text-primary-container">Enero 2024</span>
+</h2>
+<p class="font-body text-secondary max-w-xs text-right uppercase tracking-widest text-xs">Colección inspirada en la arquitectura brutalista de la capital.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Product 1 -->
+<div class="group relative bg-surface-container overflow-hidden">
+<img class="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist black premium cotton t-shirt with subtle white geometric print on chest flat lay on dark concrete background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARJS259t5-_giguMB2eLZuwnjJiTkKquKjfc7CMTfmf-0nVtlwPb8zUAS-i4saRNKWCA4dcwQALDxL8VJXeLxC3KbnwkkiRSJ3DE5SFwFM8o1dHB-FzDve3jmvek1uiioGovIOvyebnCYEa8ONhUCEG0K2626LWB_8_vUdvBb-YWfdUI779O6XEF45Yb4hUISqwF_od2jRwWH72ngdMs_4vRRiR-GEviRSbGbuqJusxUETOzotJfEGD2pMV9i10GYPOwjlvBDYuhQ"/>
+<div class="p-6">
+<h4 class="font-headline font-bold text-xl text-white uppercase mb-1">MGA CONCRETE TEE</h4>
+<p class="text-secondary text-sm mb-4">100% Algodón Premium, Oversized Fit.</p>
+<button class="w-full py-3 border border-outline-variant/30 font-headline font-bold uppercase tracking-widest text-white hover:bg-white hover:text-black transition-colors">Comprar</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group relative bg-surface-container overflow-hidden md:mt-12">
+<img class="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern streetwear model wearing white heavy cotton t-shirt with bold red typography on back in urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6ci9gebEysm0ANLOwUVC4-SokksZT7TInNmuGb3uYlHKagf9s44esi2mWQ6UCKSM30T3HcaClFS7di6dmK32vN7EHv92d5QpqJUqC3Qk-ARvtpZO_g5VrZmcITaSAI4jgAZb6dgdmlUpT3i48b2hE_jV7XQN0aO92hJ5m4fsH8AsT4J01zfIUL95zL0syFc3CtELQWm4s4MsmF1OrQ07FU74CEYPd8AJ8SAhUv09NPoKC8fnRe7JcQAb9TORBo568MQuezMkMc9k"/>
+<div class="p-6">
+<h4 class="font-headline font-bold text-xl text-white uppercase mb-1">PULSE RED LOGO</h4>
+<p class="text-secondary text-sm mb-4">Graphic Edition, Limited Release.</p>
+<button class="w-full py-3 border border-outline-variant/30 font-headline font-bold uppercase tracking-widest text-white hover:bg-white hover:text-black transition-colors">Comprar</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group relative bg-surface-container overflow-hidden">
+<img class="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Streetwear t-shirt close up showing textured high-quality fabric and premium stitching detail in dark moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4a376VSz8A6JteRAXMcfpPw1t5TgsjPwkxbxtM8nQwffsb8CJgMKBlgcnNTK9otfZQV7Txg20-GuMOje0sIABYtGmfpWD4Ao4a6tRWXlx36DfDWzC4IB3vQ6pbSJrC6x2WTPrlVsS38sqiO4fTthM5abdaPVYh9UPRW20Qav41-wB9ZIK0Aw_aCdsj_hd4vZ9zWZ_K-y-RA--q978PaFerfm9nSS9sy-RncCQPMT4u2JNIh1hX1zs3BsqfQLnAaL1k4xsTgH_Vws"/>
+<div class="p-6">
+<h4 class="font-headline font-bold text-xl text-white uppercase mb-1">VOID BLACK LAYER</h4>
+<p class="text-secondary text-sm mb-4">Boxy Cut, Essential Streetwear.</p>
+<button class="w-full py-3 border border-outline-variant/30 font-headline font-bold uppercase tracking-widest text-white hover:bg-white hover:text-black transition-colors">Comprar</button>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group relative bg-surface-container overflow-hidden md:mt-12">
+<img class="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Dark charcoal t-shirt with abstract red map design of Managua on center chest professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzC6sG9xzqeP-Ypku6qG95tswKByzwm3LIqA3EbTczsXAC_B-uONe9LQTFDEi14-kgmRLF5GQ4TkalcANvnkXosS_BuOVnIRRvgOIUrabNZwwH5NWdEVF_6Gxg0mh7M-SXTH62asbV2yFAXt_TCSp2w0FUKdoGsjU0D4MtzHp-9wE_g597Psku6HSrCrwYS1rq0axkecHU8xQLFKkxx9oykBdkU04QP3a6xv_Yx68gArQFTCgvDUY_axqlTlSfzSWmAb6SRgx9CSY"/>
+<div class="p-6">
+<h4 class="font-headline font-bold text-xl text-white uppercase mb-1">ARCHIVE MAP 01</h4>
+<p class="text-secondary text-sm mb-4">Acid Wash, Technical Print.</p>
+<button class="w-full py-3 border border-outline-variant/30 font-headline font-bold uppercase tracking-widest text-white hover:bg-white hover:text-black transition-colors">Comprar</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof -->
+<section class="py-24 bg-surface-container-low overflow-hidden" id="faq-section">
+<div class="container mx-auto px-8">
+<div class="flex items-center gap-4 mb-16">
+<div class="h-px flex-1 bg-outline-variant/20"></div>
+<h2 class="font-headline text-3xl font-bold uppercase tracking-widest text-white">The Tribe</h2>
+<div class="h-px flex-1 bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface p-10 relative">
+<span class="material-symbols-outlined text-primary-container absolute top-6 right-6" data-icon="format_quote" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface italic mb-8">"La calidad de la tela es otro nivel. Se nota que es streetwear real, no comercial."</p>
+<p class="font-headline font-bold uppercase text-white">Carlos M. — <span class="text-secondary font-normal text-sm">@carlosmga</span></p>
+</div>
+<div class="bg-surface p-10 relative">
+<span class="material-symbols-outlined text-primary-container absolute top-6 right-6" data-icon="format_quote" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface italic mb-8">"El envío fue súper rápido. Pedí a mediodía y a las 4 ya estaba estrenando."</p>
+<p class="font-headline font-bold uppercase text-white">Andrea R. — <span class="text-secondary font-normal text-sm">@andrea_street</span></p>
+</div>
+<div class="bg-surface p-10 relative">
+<span class="material-symbols-outlined text-primary-container absolute top-6 right-6" data-icon="format_quote" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface italic mb-8">"Diseños brutales. Por fin una marca en Nicaragua que entiende la estética urbana."</p>
+<p class="font-headline font-bold uppercase text-white">Kevin G. — <span class="text-secondary font-normal text-sm">@kevin_graffiti</span></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Lead Capture Form -->
+<section class="py-24 bg-background border-y border-outline-variant/10" id="discount-form">
+<div class="container mx-auto px-8">
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-16 items-start">
+<div class="flex-1">
+<h2 class="font-headline text-6xl font-black text-white uppercase tracking-tighter mb-6 leading-none">
+                            Obtener mi <br/> <span class="text-primary-container underline decoration-4 underline-offset-8">descuento</span>
+</h2>
+<p class="text-secondary text-lg mb-8 leading-relaxed max-w-sm">
+                            Únete al archivo exclusivo. Recibe un 20% OFF en tu primera compra y sé el primero en enterarte de nuevos drops.
+                        </p>
+<div class="flex items-center gap-4 py-4 px-6 bg-surface-container-high border-l-4 border-primary-container">
+<span class="material-symbols-outlined text-primary-container animate-pulse" data-icon="timer">timer</span>
+<span class="font-headline font-bold text-white uppercase text-sm tracking-widest">Oferta limitada: Solo 15 cupones restantes hoy.</span>
+</div>
+</div>
+<div class="flex-1 w-full bg-surface-container p-10 shadow-2xl">
+<form class="space-y-8">
+<div class="space-y-2">
+<label class="font-headline text-xs font-bold text-secondary uppercase tracking-widest">Nombre Completo</label>
+<input class="w-full bg-surface-container-high border-none border-b-2 border-outline-variant/30 focus:border-primary-container focus:ring-0 text-white font-body p-4 transition-colors" placeholder="EJ. JUAN PÉREZ" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-headline text-xs font-bold text-secondary uppercase tracking-widest">Edad</label>
+<input class="w-full bg-surface-container-high border-none border-b-2 border-outline-variant/30 focus:border-primary-container focus:ring-0 text-white font-body p-4" placeholder="24" type="number"/>
+</div>
+<div class="space-y-2">
+<label class="font-headline text-xs font-bold text-secondary uppercase tracking-widest">Compras Online</label>
+<div class="flex bg-surface-container-high p-1">
+<button class="flex-1 py-3 font-headline font-bold text-xs uppercase bg-primary-container text-white" type="button">Sí</button>
+<button class="flex-1 py-3 font-headline font-bold text-xs uppercase text-secondary hover:text-white" type="button">No</button>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<label class="font-headline text-xs font-bold text-secondary uppercase tracking-widest block">Intereses</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-6 py-3 border border-primary-container text-primary-container font-headline font-bold text-xs uppercase tracking-tighter" type="button">Moda</button>
+<button class="px-6 py-3 border border-outline-variant text-secondary font-headline font-bold text-xs uppercase tracking-tighter hover:border-primary-container hover:text-white" type="button">Sneakers</button>
+<button class="px-6 py-3 border border-outline-variant text-secondary font-headline font-bold text-xs uppercase tracking-tighter hover:border-primary-container hover:text-white" type="button">Streetwear</button>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<input class="w-5 h-5 bg-surface-container-high border-outline-variant rounded-none checked:bg-primary-container focus:ring-0" id="opt-in" type="checkbox"/>
+<label class="text-xs text-secondary leading-tight" for="opt-in">Acepto recibir comunicaciones de marketing y lanzamientos exclusivos.</label>
+</div>
+<button class="w-full bg-primary-container text-on-primary-fixed font-headline font-black text-xl py-6 uppercase tracking-tighter hover:bg-primary-fixed transition-colors active:scale-95 duration-75" type="submit">
+                                Obtener descuento
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#0e0e0e]">
+<div class="w-full flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8">
+<div class="flex flex-col gap-2">
+<span class="text-lg font-black text-white font-headline tracking-tighter">URBANSTYLE MANAGUA</span>
+<p class="font-['Inter'] text-xs tracking-widest uppercase text-[#c6c6c7]">© 2024 URBANSTYLE MANAGUA. RAW ARCHITECTURE.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-[#c6c6c7] hover:text-[#ff5545] transition-colors" href="#">COLLECTIONS</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-[#c6c6c7] hover:text-[#ff5545] transition-colors" href="#">STORES</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-[#c6c6c7] hover:text-[#ff5545] transition-colors" href="#">ARCHIVE</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-[#c6c6c7] hover:text-[#ff5545] transition-colors" href="#">CONTACT</a>
+</div>
+</div>
+</footer>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+    </style>
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = menuToggle.querySelector('.material-symbols-outlined');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  function toggleMenu() {
+    const isOpen = mobileMenu.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+    menuIcon.textContent = isOpen ? 'close' : 'menu';
+  }
+
+  menuToggle.addEventListener('click', toggleMenu);
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('active')) {
+        toggleMenu();
+      }
+    });
+  });
+</script></body></html>
